@@ -415,11 +415,13 @@ ul, figure, p{
 
         .img-box{
 
-            figure{ 
+            figure{
+                transition-duration: 0.7s;
+                transform: scale(1);
+                clip-path: inset(0 0 0 0);
                 
                 img{
                     filter: grayscale(90%);
-                    transition-duration: 0.7s;
                 }
             }
         }
@@ -430,10 +432,10 @@ ul, figure, p{
                 
 
                 figure{
+                    transform: scale(1.15);
 
                     img{
                         filter: grayscale(0%);
-                        transform: scale(.9);
                     }
                 }
             }

@@ -454,17 +454,27 @@ ul, figure, p {
   margin-bottom: 30px;
 }
 
+#protfolio .content .img-box figure {
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
 #protfolio .content .img-box figure img {
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+}
+
+#protfolio .content:hover .img-box figure {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 #protfolio .content:hover .img-box figure img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 /*# sourceMappingURL=style.css.map */
