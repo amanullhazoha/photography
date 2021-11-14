@@ -1,0 +1,470 @@
+/*global css*/
+ul, figure, p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #f96f00;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 400;
+}
+
+.heading {
+  font-size: 60px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 375px) {
+  .heading {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .active {
+    display: block !important;
+  }
+  .hide {
+    display: none !important;
+  }
+}
+
+/*header*/
+#header {
+  position: relative;
+  z-index: 999;
+  padding-top: 30px;
+  width: 100%;
+  height: 100vh;
+}
+
+#header .navbar {
+  padding: 0;
+}
+
+#header .navbar .content {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .navbar #logo {
+  width: 170px;
+}
+
+#header .navbar .nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#header .navbar .nav ul a li {
+  list-style: none;
+  float: left;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Didact Gothic", sans-serif;
+  margin: 15px 2px;
+  padding: 8px;
+}
+
+#header .navbar .nav ul a :hover {
+  color: #f96f00;
+}
+
+#header .navbar .toggler, #header .navbar .closeBtn {
+  display: none;
+  position: relative;
+  border: none;
+  background: transparent;
+}
+
+#header .navbar .toggler span, #header .navbar .closeBtn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #f96f00;
+}
+
+#header .navbar .toggler .bottom, #header .navbar .closeBtn .bottom {
+  margin-top: 5px;
+}
+
+#header .navbar .closeBtn {
+  width: 24px !important;
+}
+
+#header .navbar .closeBtn .top {
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#header .navbar .closeBtn .bottom {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 991px) {
+  #header .navbar .nav {
+    display: none;
+    position: absolute;
+    background: #000;
+    top: 65px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 5px #fff;
+            box-shadow: 0 0 5px #fff;
+  }
+  #header .navbar .nav ul a li {
+    float: none;
+    display: block;
+    margin: 0;
+  }
+  #header .navbar .toggler {
+    display: block;
+  }
+}
+
+/*banner*/
+#banner {
+  background-image: url(../img/headerBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+#banner .overflow {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#banner .container {
+  width: 100%;
+  height: 100%;
+}
+
+#banner .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+#banner .container .content .caption {
+  position: relative;
+  z-index: 999;
+  font-family: "Barlow Condensed", sans-serif;
+  width: 320px;
+}
+
+#banner .container .content .caption h5 {
+  color: #777;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+#banner .container .content .caption h1 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 375px) {
+  #banner .container .content .caption h1 {
+    font-size: 50px;
+  }
+}
+
+#banner .container .content .caption span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+#banner .container .content .caption .left {
+  top: 0;
+  left: 0;
+  border-top: 1px solid #f96f00;
+  border-left: 1px solid #f96f00;
+}
+
+#banner .container .content .caption .right {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #f96f00;
+  border-right: 1px solid #f96f00;
+}
+
+@media screen and (max-width: 375px) {
+  #banner .container .content .caption {
+    width: 255px;
+    margin: 0 auto;
+  }
+  #banner .container .content .caption h1 {
+    font-size: 50px;
+  }
+}
+
+#banner .container .downBtn {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  z-index: 999;
+}
+
+#banner .container .downBtn button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  position: relative;
+}
+
+#banner .container .downBtn button i {
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+}
+
+#banner .container .downBtn button .last {
+  top: 10px !important;
+}
+
+/*about us*/
+#about {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#about .content {
+  width: 730px;
+  margin: 0 auto;
+}
+
+#about .content .title, #about .content .heading {
+  text-align: center;
+}
+
+#about .content .parh {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Didact Gothic", sans-serif;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+#about .content .award {
+  padding-top: 30px;
+  height: 160px;
+}
+
+#about .content .award .title {
+  padding-bottom: 20px;
+}
+
+#about .content .award .carousel {
+  width: 100%;
+  position: relative;
+}
+
+#about .content .award .carousel .owlCarousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about .content .award .carousel .owlCarousel .item {
+  margin-right: 15px;
+  border: 1px solid #f2e7eb;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#about .content .award .carousel .owlCarousel .item:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+@media screen and (max-width: 768px) {
+  #about .content {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #about .content {
+    width: 100%;
+  }
+}
+
+/*servics*/
+#services {
+  background: #f7f7f7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#services .heading {
+  margin-bottom: 35px;
+}
+
+#services figure {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+#services figure img {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+#services figure figcaption {
+  position: absolute;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  padding: 30px;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+}
+
+#services figure figcaption .title {
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+#services figure figcaption h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+#services figure figcaption .arrowSimbol {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+#services figure:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#services figure:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#services figure:hover figcaption {
+  bottom: 0;
+}
+
+#services .servicesPage {
+  position: relative;
+  margin-top: 20px;
+  float: right;
+}
+
+#services .servicesPage a {
+  color: #777;
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+#services .servicesPage a::before {
+  content: '';
+  position: absolute;
+  margin-top: 5px;
+  left: 0;
+  bottom: 0;
+  width: 79px;
+  height: 1px;
+  background: #f96f00;
+}
+
+#services .servicesPage a:hover::before {
+  display: none;
+}
+
+/*protfolio*/
+#protfolio {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#protfolio .content {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+
+#protfolio .content .img-box figure img {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+#protfolio .content:hover .img-box figure img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=style.css.map */
